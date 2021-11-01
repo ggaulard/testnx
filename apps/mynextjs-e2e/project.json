@@ -1,0 +1,29 @@
+{
+  "root": "apps/mynextjs-e2e",
+  "sourceRoot": "apps/mynextjs-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/mynextjs-e2e/cypress.json",
+        "devServerTarget": "mynextjs:serve",
+        "tsConfig": "apps/mynextjs-e2e/tsconfig.json"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "mynextjs:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/mynextjs-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["mynextjs"]
+}
