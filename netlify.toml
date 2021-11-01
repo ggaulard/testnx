@@ -5,7 +5,7 @@
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
-[functions.serverless]
+[functions]
   directory = "dist/apps/mynestjs"
   included_files = ["!*.ts.js"]
 
