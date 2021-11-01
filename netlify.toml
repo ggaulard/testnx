@@ -1,9 +1,0 @@
-[build]
-  command = "npm run build"
-  publish = "apps/mynextjs/.next"
-
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
-
-[functions]
-  directory = "dist/apps/mynestjs"
