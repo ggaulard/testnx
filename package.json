@@ -5,7 +5,8 @@
   "scripts": {
     "start": "nx run-many --target=serve --projects=mynestjs,mynextjs --parallel --maxParallel=2",
     "build": "nx run-many --target=build --projects=mynestjs,mynextjs",
-    "test": "nx test"
+    "test": "nx test",
+    "build:netlify": "npm run build && cp dist/apps/mynestjs/serverless.js .netlify/functions-internal"
   },
   "private": true,
   "dependencies": {
