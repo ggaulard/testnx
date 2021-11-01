@@ -1,6 +1,8 @@
 {
   "version": 2,
   "projects": {
+    "api": "libs/api",
+    "mynestjs": "apps/mynestjs",
     "mynextjs": "apps/mynextjs",
     "mynextjs-e2e": "apps/mynextjs-e2e"
   }

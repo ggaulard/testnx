@@ -1,0 +1,52 @@
+{
+  "root": "apps/mynestjs",
+  "sourceRoot": "apps/mynestjs/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/node:build",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/mynestjs",
+        "main": "apps/mynestjs/src/main.ts",
+        "tsConfig": "apps/mynestjs/tsconfig.app.json",
+        "assets": ["apps/mynestjs/src/assets"]
+      },
+      "configurations": {
+        "production": {
+          "optimization": true,
+          "extractLicenses": true,
+          "inspect": false,
+          "fileReplacements": [
+            {
+              "replace": "apps/mynestjs/src/environments/environment.ts",
+              "with": "apps/mynestjs/src/environments/environment.prod.ts"
+            }
+          ]
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/node:execute",
+      "options": {
+        "buildTarget": "mynestjs:build"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/mynestjs/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/mynestjs"],
+      "options": {
+        "jestConfig": "apps/mynestjs/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}
