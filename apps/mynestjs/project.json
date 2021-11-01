@@ -10,7 +10,13 @@
         "outputPath": "dist/apps/mynestjs",
         "main": "apps/mynestjs/src/main.ts",
         "tsConfig": "apps/mynestjs/tsconfig.app.json",
-        "assets": ["apps/mynestjs/src/assets"]
+        "assets": ["apps/mynestjs/src/assets"],
+        "additionalEntryPoints":[
+          {
+            "entryName": "serverless",
+            "entryPath": "apps/mynestjs/src/serverless.ts"
+          }
+        ]
       },
       "configurations": {
         "production": {
