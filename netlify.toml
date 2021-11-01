@@ -5,6 +5,9 @@
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
+[functions]
+  directory = "dist/mynestjs"
+
 [[redirects]]
   from = "/api/*"
   to = "/.netlify/functions/main"

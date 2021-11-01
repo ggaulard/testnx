@@ -18,6 +18,7 @@ const nextConfig = {
   // See: https://github.com/css-modules/css-modules
   cssModules: false,
   distDir: '.build',
+  target: 'serverless',
 };
 
 module.exports = withLess(withNx(nextConfig));
