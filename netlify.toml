@@ -6,7 +6,8 @@
   package = "@netlify/plugin-nextjs"
 
 [functions.serverless]
-  included_files = ["dist/apps/mynestjs/serverless.js"]
+  directory = "dist/apps/mynestjs"
+  included_files = ["!*.ts.js"]
 
 [[redirects]]
   from = "/api/*"
