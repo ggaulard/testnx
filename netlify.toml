@@ -7,4 +7,5 @@
 
 [[redirects]]
   from = "/api/*"
-  to = "/.netlify/functions/serverless"
+  to = "/.netlify/functions/serverless/:splat"
+  status = 200
